@@ -1,0 +1,8 @@
+# HuggingFace
+HF_HOME
+
+# Python
+site-packages
+
+# fine-tuning practice output model
+finetuned-model
