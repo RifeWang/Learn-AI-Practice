@@ -1,5 +1,5 @@
 # 将依赖包直接存储在项目目录下
-# pip install -r requirements.txt --target=/workspaces/learn-llm/site-packages
+# pip install -r requirements.txt --target=/workspaces/Learn-AI-Practice/site-packages
 transformers==4.45.2
 datasets==3.0.1
 evaluate==0.4.3
@@ -9,3 +9,8 @@ bitsandbytes==0.44.1
 sentencepiece==0.2.0
 sacremoses==0.1.1
 peft==0.13.2
+beautifulsoup4==4.12.3
+langchain==0.3.7
+langchain-community==0.3.7
+sentence_transformers==3.3.0
+redis==5.2.0

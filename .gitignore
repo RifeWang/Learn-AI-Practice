@@ -1,8 +1,12 @@
+# macos
+.DS_Store
+
 # HuggingFace
 HF_HOME
 
 # Python
 site-packages
+__pycache__/
 
 # fine-tuning practice output model
 finetuned-model

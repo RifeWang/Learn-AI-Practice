@@ -6,8 +6,8 @@
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
 
 	"containerEnv": {
-		"PYTHONPATH": "/workspaces/learn-llm/site-packages",
-		"HF_HOME": "/workspaces/learn-llm/HF_HOME"
+		"PYTHONPATH": "/workspaces/Learn-AI-Practice/site-packages",
+		"HF_HOME": "/workspaces/Learn-AI-Practice/HF_HOME"
 	}
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis/redis-stack:latest
+    container_name: redis
+    ports:
+      - "6379:6379"   # 映射 Redis 默认端口
+      - "8001:8001"   # 映射 RedisInsight 默认端口
+    healthcheck:
+      test: ["CMD", "redis-cli", "PING"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  llama_cpp_server:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    container_name: llama_cpp_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/ai-models:/models  # 映射主机路径到容器
+    environment:
+      LLAMA_ARG_MODEL: /models/llama3.2-1B.gguf
+      LLAMA_ARG_CTX_SIZE: 4096
+      LLAMA_ARG_N_PREDICT: 512
+      LLAMA_ARG_N_PARALLEL: 1
+      LLAMA_ARG_HOST: "0.0.0.0"
+      LLAMA_ARG_PORT: 8080
+    
