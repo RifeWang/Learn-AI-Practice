@@ -2,9 +2,9 @@
 import bs4
 from langchain_community.document_loaders import WebBaseLoader
 
-bs4_strainer = bs4.SoupStrainer(class_=("post-title", "post-header", "post-content"))
+bs4_strainer = bs4.SoupStrainer(class_=("td-content"))
 loader = WebBaseLoader(
-    web_paths=("https://lilianweng.github.io/posts/2023-06-23-agent/",),
+    web_paths=("https://kubernetes.io/docs/concepts/services-networking/service/",),
     bs_kwargs={"parse_only": bs4_strainer},
 )
 docs = loader.load()
