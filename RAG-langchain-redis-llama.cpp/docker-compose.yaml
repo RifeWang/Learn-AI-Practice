@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   redis:
-    image: redis/redis-stack:latest
+    image: redis/redis-stack:7.4.0-v1
     container_name: redis
     ports:
       - "6379:6379"   # 映射 Redis 默认端口
@@ -27,4 +27,3 @@ services:
       LLAMA_ARG_N_PARALLEL: 1
       LLAMA_ARG_HOST: "0.0.0.0"
       LLAMA_ARG_PORT: 8080
-    
