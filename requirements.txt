@@ -14,3 +14,4 @@ langchain==0.3.7
 langchain-community==0.3.7
 sentence_transformers==3.3.0
 redis==5.2.0
+diffusers==0.31.0
