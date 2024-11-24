@@ -10,3 +10,6 @@ __pycache__/
 
 # fine-tuning practice output model
 finetuned-model
+
+# whisper
+WHISPER_MODEL

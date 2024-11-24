@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  # docker run -p 8080:8080 -v ~/ai-models:/models ghcr.io/ggerganov/llama.cpp:server -m /models/llama3.2-1B.gguf -c 512 --host 0.0.0.0 --port 8080
+  llama_cpp_server:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    container_name: llama_cpp_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/ai-models:/models
+    environment:
+      LLAMA_ARG_MODEL: /models/llama3.2-1B.gguf
+      LLAMA_ARG_CTX_SIZE: 4096
+      LLAMA_ARG_N_PREDICT: 512
+      LLAMA_ARG_N_PARALLEL: 1
+      LLAMA_ARG_HOST: "0.0.0.0"
+      LLAMA_ARG_PORT: 8080

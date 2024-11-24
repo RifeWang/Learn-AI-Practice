@@ -1,5 +1,5 @@
 
-参考官方文档：https://github.com/ggerganov/whisper.cpp
+whisper.cpp 使用示例，参考官方文档：https://github.com/ggerganov/whisper.cpp
 
 1. 拉取镜像:
 - `docker pull ghcr.io/ggerganov/whisper.cpp:main`
