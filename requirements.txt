@@ -18,3 +18,4 @@ diffusers==0.31.0
 openai-whisper==20240930
 uvicorn==0.32.1
 fastapi==0.115.5
+outetts==0.2.0
